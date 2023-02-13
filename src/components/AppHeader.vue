@@ -34,8 +34,14 @@ export default {
 
             <nav>
                 <ul class="header-icons">
+                    <button class="search-btn">
+                        <img class="search-icon" src="/cinema/img/assets/image (8).svg" alt="">
+                    </button>
+
                     <li v-for="index in icons">
-                        <img :src="index.img" alt="icon">    
+                        <button>
+                            <img :src="index.img" alt="icon">
+                        </button>    
                     </li>
                 </ul>
             </nav>
@@ -74,9 +80,13 @@ export default {
             @include flex-between;
             height: 100%;
 
+
+
             li {
                 padding: 2rem 0.5rem;
                 height: 100%;
+
+
             }
         }
         
@@ -84,9 +94,29 @@ export default {
             list-style: none;
             @include flex-between;
 
-            li {
-                padding: 0.5rem;
+            button {
+                background-color: transparent;
+                height: 1rem;
+                width: 2rem;
+                border: none;
+                margin-left: 1rem;
+                vertical-align: middle;
+                
+                img {
+                    height: 100%;
+                }
+
+                &.search-btn {
+                    border-right: 1px solid $color-gray;
+                    width: 5rem;
+                    height: 1.5rem;
+
+                    img {
+                        height: 100%;
+                    }
+                }
             }
+
         }
     }
 </style>
