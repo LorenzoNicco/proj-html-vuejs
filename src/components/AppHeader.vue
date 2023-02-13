@@ -1,11 +1,12 @@
 <script>
+import { store } from "../store.js";
 import JumboSection from "./JumboSection.vue";
 
 export default {
     name: "AppHeader",
     data() {
         return {
-            
+            store
         }
     },
     components: {
