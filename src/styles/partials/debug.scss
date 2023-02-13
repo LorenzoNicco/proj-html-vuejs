@@ -8,6 +8,7 @@
     }
 }
 
+
 section {
     background-color: cadetblue;
 
@@ -19,4 +20,23 @@ section {
             border: 1px dashed black;
         }
     }
+}
+
+
+// MAIN
+.card-section {
+    .container {
+        background-color: cornflowerblue;
+
+        .card-container {
+            background-color: coral;
+            border: 1px dashed black;
+
+            .card {
+                background-color: orange;
+                border: 1px dashed black;
+            }
+        }
+    }
+
 }

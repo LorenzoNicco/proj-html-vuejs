@@ -28,7 +28,6 @@ export default {
 
     .container {
         @include container-size;
-        padding: 4rem 0;
 
         .col {
             width: 50%;

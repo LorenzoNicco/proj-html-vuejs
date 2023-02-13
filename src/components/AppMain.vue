@@ -19,10 +19,10 @@ export default {
 </script>
 
 <template>
-    <!-- <CardsSection />
+    <CardsSection />
     <JumboSection />
     <CardsSection />
-    <DataAndPartners />
+    <!-- <DataAndPartners />
     <CardsSection />
     <JumboSection />
     <CardsSection />
