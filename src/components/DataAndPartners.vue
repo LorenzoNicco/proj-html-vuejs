@@ -1,21 +1,16 @@
 <script>
-import JumboSection from "./JumboSection.vue";
-
 export default {
-    name: "AppHeader",
+    name: "DataAndPartners",
     data() {
         return {
             
         }
-    },
-    components: {
-        JumboSection
     }
 }
 </script>
 
 <template>
-    <JumboSection />
+
 </template>
 
 <style scoped>
