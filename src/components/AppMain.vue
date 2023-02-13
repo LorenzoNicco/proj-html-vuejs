@@ -29,6 +29,6 @@ export default {
     <DataAndPartners />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
