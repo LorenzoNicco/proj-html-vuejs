@@ -22,11 +22,11 @@ export default {
     <CardsSection />
     <JumboSection />
     <CardsSection />
-    <!-- <DataAndPartners />
+    <DataAndPartners />
     <CardsSection />
     <JumboSection />
     <CardsSection />
-    <DataAndPartners /> -->
+    <DataAndPartners />
 </template>
 
 <style lang="scss" scoped>

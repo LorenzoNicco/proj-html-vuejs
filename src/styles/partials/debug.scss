@@ -40,3 +40,16 @@ section {
     }
 
 }
+
+.d-p-section {
+    background-color: darkslategray;
+
+    .container {
+        background-color: goldenrod;
+
+        .card {
+            background-color: coral;
+            border: 1px dashed black;
+        }
+    }
+}
