@@ -2,6 +2,7 @@
 import JumboSection from "./JumboSection.vue";
 import DataAndPartners from "./DataAndPartners.vue";
 import CardsSection from "./CardsSection.vue";
+import FormSection from "./FormSection.vue";
 
 export default {
     name: "AppMain",
@@ -12,7 +13,8 @@ export default {
     components: {
         JumboSection,
         DataAndPartners,
-        CardsSection
+        CardsSection,
+        FormSection
     }
 }
 </script>
@@ -26,6 +28,7 @@ export default {
     <JumboSection />
     <CardsSection />
     <DataAndPartners />
+    <FormSection />
 </template>
 
 <style lang="scss" scoped>
