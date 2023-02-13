@@ -22,11 +22,25 @@ export default {
 <template>
     <main>
         <CardsSection />
-        <JumboSection />
+        <JumboSection class="end"/>
         <CardsSection />
         <DataAndPartners />
         <CardsSection />
-        <JumboSection />
+
+        <section class="testimonials-section">
+            <div>
+                <div>DEBUG</div>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nobis odio repudiandae ad aut inventore eligendi at explicabo dolorem illo?</p>
+
+                <div>
+                    IMG PLACEHOLDER
+                </div>
+
+                <div>DEBUG</div>
+            </div>
+        </section>
+
         <CardsSection />
         <DataAndPartners />
         <FormSection />
@@ -34,5 +48,21 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    .end {
+        padding-left: 50%;
+    }
 
+    .testimonials-section {
+        padding: 4rem 0;
+
+        div {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+
+            >*:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
 </style>
