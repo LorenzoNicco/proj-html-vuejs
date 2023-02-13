@@ -19,14 +19,14 @@ export default {
 </script>
 
 <template>
-    <CardsSection />
+    <!-- <CardsSection />
     <JumboSection />
     <CardsSection />
     <DataAndPartners />
     <CardsSection />
     <JumboSection />
     <CardsSection />
-    <DataAndPartners />
+    <DataAndPartners /> -->
 </template>
 
 <style lang="scss" scoped>

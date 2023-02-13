@@ -39,7 +39,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "../styles/partials/debug.scss";
+    @import "../styles/partials/debug.scss";
 
     header {
         .header-top {
