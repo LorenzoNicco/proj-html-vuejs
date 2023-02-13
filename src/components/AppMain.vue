@@ -20,15 +20,17 @@ export default {
 </script>
 
 <template>
-    <CardsSection />
-    <JumboSection />
-    <CardsSection />
-    <DataAndPartners />
-    <CardsSection />
-    <JumboSection />
-    <CardsSection />
-    <DataAndPartners />
-    <FormSection />
+    <main>
+        <CardsSection />
+        <JumboSection />
+        <CardsSection />
+        <DataAndPartners />
+        <CardsSection />
+        <JumboSection />
+        <CardsSection />
+        <DataAndPartners />
+        <FormSection />
+    </main>
 </template>
 
 <style lang="scss" scoped>
