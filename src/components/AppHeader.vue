@@ -11,7 +11,11 @@ export default {
     },
     components: {
         JumboSection
-    }
+    },
+    props: [
+        "link",
+        "icons"
+    ]
 }
 </script>
 
@@ -19,18 +23,20 @@ export default {
     <header>
         <div class="header-top">
             <div class="logo">
-                <img src="../assets/cinema/img/assets/logo.svg" alt="">
+                <img src="/cinema/img/assets/logo.svg" alt="logo">
             </div>
 
             <nav>
                 <ul class="header-menu">
-                    <li v-for="n in 7">DEBUG</li>
+                    <li v-for="index in link">{{ index }}</li>
                 </ul>
             </nav>
 
             <nav>
                 <ul class="header-icons">
-                    <li v-for="n in 5">DEBUG</li>
+                    <li v-for="index in icons">
+                        <img :src="index.img" alt="icon">    
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -40,7 +46,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    @import "../styles/partials/debug.scss";
+    // @import "../styles/partials/debug.scss";
 
     header {
         .header-top {
