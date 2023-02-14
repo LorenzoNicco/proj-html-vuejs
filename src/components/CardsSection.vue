@@ -1,59 +1,56 @@
 <script>
+import { store } from "../store.js";
+
 export default {
     name: "CardsSection",
     data() {
         return {
-            
+            store
         }
-    }
+    },
+    props: [
+        "card"
+    ]
 }
 </script>
 
 <template>
-    <section class="card-section">
-        <div class="container">
-            <h6>DEBUG</h6>
-
-            <h2>DEBUG</h2>
-
-            <div class="card-container">
-                <div class="card"
-                 v-for="n in 6"
-                >
-                    <div>DEBUG IMG</div>
-
-                    <h5>DEBUG</h5>
-
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, omnis.</p>
-                </div>
-            </div>
+    <div class="card">
+        <div>
+            <img :src="card.img" :class="card.imgWidth" alt="img">
         </div>
-    </section>
+
+        <h5>{{ card.title }}</h5>
+
+        <p>{{ card.sentence }}</p>
+                </div>
 </template>
 
 <style lang="scss" scoped>
-    @import "../styles/partials/debug.scss";
+    // @import "../styles/partials/debug.scss";
+    .card {
+        text-align: center;
+        width: calc((100% / 3) - 1rem);
+        margin-top: 2rem;
 
-    .card-section {
-        background-color: white;
+        div {
+            width: 100%;
+            height: 6rem;
 
-        .container {
-            @include container-size;
-
-            h6, h2 {
-                text-align: center;
-                margin-bottom: 1rem;
+            img {
+                height: auto;
+                object-fit: cover;
             }
 
-            .card-container {
-                width: 100%;
-                @include flex-card-container;
-
-                .card {
-                    text-align: center;
-                    width: calc((100% / 3) - 0.7rem);
-                }
-            }
         }
+        
+        p {
+            line-height: 1.5rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .first-width {
+        width: 4rem;
     }
 </style>
