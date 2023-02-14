@@ -5,39 +5,34 @@ export default {
         return {
             
         }
-    }
+    },
+    props: [
+        "data"
+    ]
 }
 </script>
 
 <template>
-    <section class="d-p-section">
-        <div class="container">
-            <div class="card"
-             v-for="n in 4"
-            >
-                <span>DEBUG</span>
+    <div class="card">
+        <span>{{ data.numbers }}</span>
 
-                <span>DEBUG</span>
-            </div>
-        </div>
-    </section>
+        <span>{{ data.paragraphe }}</span>
+    </div>
 </template>
 
 <style lang="scss" scoped>
-    @import "../styles/partials/debug.scss";
+    // @import "../styles/partials/debug.scss";
 
-    .container {
-        @include container-size;
-        @include flex-around;
+    .card {
+        color: white;
+        text-align: center;
 
-        .card {
-            color: white;
-            text-align: center;
-
-            span:first-child {
-                display: block;
-                margin-bottom: 0.5rem;
-            }
+        span:first-child {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            font-weight: bold;
         }
     }
+
 </style>

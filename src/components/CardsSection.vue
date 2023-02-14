@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <div class="card">
+    <div class="card" :class="card.cardSize">
         <div>
             <img :src="card.img" :class="card.imgWidth" alt="img">
         </div>
@@ -23,14 +23,13 @@ export default {
         <h5>{{ card.title }}</h5>
 
         <p>{{ card.sentence }}</p>
-                </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
     // @import "../styles/partials/debug.scss";
     .card {
         text-align: center;
-        width: calc((100% / 3) - 1rem);
         margin-top: 2rem;
 
         div {
@@ -48,6 +47,14 @@ export default {
             line-height: $line-height-media;
             margin-top: 1rem;
         }
+    }
+
+    .first-card-size {
+       width: calc((100% / 3) - 1rem);
+    }
+
+    .second-card-size {
+       width: calc((100% / 4) - 1rem);
     }
 
     .first-width {

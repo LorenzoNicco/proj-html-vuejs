@@ -35,37 +35,43 @@ export default {
                         img: "/cinema/img/assets/image (14).svg",
                         title: "ARRAY OF EQUIPMENT",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-                        imgWidth: "first-width"
+                        imgWidth: "first-width",
+                        cardSize: "first-card-size"
                     },
                     {
                         img: "/cinema/img/assets/image (15).svg",
                         title: "NEW TECHNOLOGIES",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-                        imgWidth: "first-width"
+                        imgWidth: "first-width",
+                        cardSize: "first-card-size"
                     },
                     {
                         img: "/cinema/img/assets/image (16).svg",
                         title: "VERSITILE ACTORS",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-                        imgWidth: "first-width"
+                        imgWidth: "first-width",
+                        cardSize: "first-card-size"
                     },
                     {
                         img: "/cinema/img/assets/image (17).svg",
                         title: "TOP DIRECTORS",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-                        imgWidth: "first-width"
+                        imgWidth: "first-width",
+                        cardSize: "first-card-size"
                     },
                     {
                         img: "/cinema/img/assets/image (18).svg",
                         title: "MINUTE EDITING",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-                        imgWidth: "first-width"
+                        imgWidth: "first-width",
+                        cardSize: "first-card-size"
                     },
                     {
                         img: "/cinema/img/assets/image (19).svg",
                         title: "VERSITILE ACTORS",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-                        imgWidth: "first-width"
+                        imgWidth: "first-width",
+                        cardSize: "first-card-size"
                     }
                 ],
                 secondSection: [
@@ -73,37 +79,93 @@ export default {
                         img: "/cinema/img/assets/Gallery-01.jpg",
                         title: "SEVENTEENTH SUMMER",
                         sentence: "Commercial, Music Video",
-                        imgWidth: "second-width"
+                        imgWidth: "second-width",
+                        cardSize: "first-card-size"
                     },
                     {
                         img: "/cinema/img/assets/Gallery-02.jpg",
                         title: "A MESSAGE TO SPACE",
                         sentence: "Short Film",
-                        imgWidth: "second-width"
+                        imgWidth: "second-width",
+                        cardSize: "first-card-size"
                     },
                     {
                         img: "/cinema/img/assets/Gallery-03.jpg",
                         title: "THE MOST BEAUTIFUL THING",
                         sentence: "Music Video",
-                        imgWidth: "second-width"
+                        imgWidth: "second-width",
+                        cardSize: "first-card-size"
                     },
                     {
                         img: "/cinema/img/assets/Gallery-04.jpg",
                         title: "PERMISSION TO SPEAK",
                         sentence: "Documentary",
-                        imgWidth: "second-width"
+                        imgWidth: "second-width",
+                        cardSize: "first-card-size"
                     },
                     {
                         img: "/cinema/img/assets/Gallery-05.jpg",
                         title: "EXPLORE OUR SPACE",
                         sentence: "Film noir",
-                        imgWidth: "second-width"
+                        imgWidth: "second-width",
+                        cardSize: "first-card-size"
                     },
                     {
                         img: "/cinema/img/assets/Gallery-06.jpg",
                         title: "FILM PRODUCTION",
                         sentence: "Blaxploitation",
-                        imgWidth: "second-width"
+                        imgWidth: "second-width",
+                        cardSize: "first-card-size"
+                    }
+                ],
+                thirdSection: [
+                    {
+                        img: "/cinema/img/assets/Team-01.jpg",
+                        title: "FABRICIO GUERRA",
+                        sentence: "Main Director",
+                        imgWidth: "second-width",
+                        cardSize: "second-card-size"
+                    },
+                    {
+                        img: "/cinema/img/assets/Team-02.jpg",
+                        title: "UMBERTO PAGODA",
+                        sentence: "Main Writer",
+                        imgWidth: "second-width",
+                        cardSize: "second-card-size"
+                    },
+                    {
+                        img: "/cinema/img/assets/Team-03.jpg",
+                        title: "GLORIA RICCASSO",
+                        sentence: "Main Producer",
+                        imgWidth: "second-width",
+                        cardSize: "second-card-size"
+                    },
+                    {
+                        img: "/cinema/img/assets/Team-04.jpg",
+                        title: "LIO NAPOIN",
+                        sentence: "Cameraman",
+                        imgWidth: "second-width",
+                        cardSize: "second-card-size"
+                    },
+                ]
+            },
+            dataAndPartners: {
+                firstData: [
+                    {
+                        numbers: 158,
+                        paragraphe: "SATISFIED CLIENTS"
+                    },
+                    {
+                        numbers: "3+",
+                        paragraphe: "OUR PROJECTS"
+                    },
+                    {
+                        numbers: "1,906",
+                        paragraphe: "CUP OF COFFEE"
+                    },
+                    {
+                        numbers: 2,
+                        paragraphe: "OUR AWARDS"
                     }
                 ]
             }
@@ -151,8 +213,30 @@ export default {
                 </div>
             </div>
         </section>
-        <!-- <DataAndPartners />
-        <CardsSection /> -->
+
+        <section class="d-p-section">
+            <div class="container">
+                <DataAndPartners 
+                 v-for="data in dataAndPartners.firstData"
+                 :data="data"
+                />
+            </div>
+        </section>
+
+        <section class="card-section">
+            <div class="container">
+                <h6>{{ cardTitle[2].secondary }}</h6>
+
+                <h2>{{ cardTitle[2].main }}</h2>
+
+                <div class="card-container">
+                    <CardsSection 
+                     v-for="card in cardInfos.thirdSection" 
+                     :card="card" 
+                    />
+                </div>
+            </div>
+        </section>
 
         <section class="testimonials-section">
             <div>
@@ -195,8 +279,14 @@ export default {
     }
 }
 
-.end {
-    padding-left: 50%;
+.d-p-section {
+    background-image: url("/cinema/img/assets/Parallax-01.jpg");
+    background-position: center;
+
+    .container {
+        @include container-size;
+        @include flex-around;
+    }
 }
 
 .testimonials-section {
