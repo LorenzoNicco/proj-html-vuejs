@@ -12,11 +12,11 @@ export default {
     <section class="form-section">
         <div class="container">
             <div class="col">
-                <h5>DEBUG</h5>
+                <h6>COLLABORATE</h6>
 
-                <h2>DEBUG</h2>
+                <h2>WANT TO WORK WITH US?<br> LEAVE US A MESSAGE!</h2>
 
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, culpa reiciendis autem dolor dicta corrupti illum ipsam nisi quam tempore.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse adipisci saepe illo fugiat aperiam id. Qui, expedita architecto magnam aliquid odio dicta iure. Perspiciatis dicta ipsum voluptatum quo iste quos in aspernatur consequuntur, sequi labore.</p>
             </div>
 
             <div class="col">
@@ -43,7 +43,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    @import "../styles/partials/debug.scss";
+    // @import "../styles/partials/debug.scss";
     .form-section {
         background-color: white;
 
@@ -54,6 +54,14 @@ export default {
             .col {
                 width: 48%;
                 align-self: start;
+
+                h2 {
+                    margin: 1.5rem 0;
+                }
+
+                p {
+                    line-height: $line-height-media;
+                }
                 
                 div {
                     display: flex;
@@ -61,14 +69,14 @@ export default {
 
                     input {
                         width: 48%;
-                        margin-bottom: 1rem;
+                        @include input-rules;
                     }
                 }
 
                 textarea {
                     width: 100%;
                     display: block;
-                    margin-bottom: 1rem;
+                    @include input-rules;
                 }
 
                 .submit {

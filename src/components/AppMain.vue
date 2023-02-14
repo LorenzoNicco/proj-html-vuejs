@@ -239,6 +239,7 @@ export default {
 
 <template>
     <main>
+        <!-- card section 1 ------------------------------------------------------------->
         <section class="card-section">
             <div class="container">
                 <h6>{{ cardTitle[0].secondary }}</h6>
@@ -254,8 +255,10 @@ export default {
             </div>
         </section>
 
+        <!-- about us section  ------------------------------------------------------------->
         <aboutUsSection />
 
+        <!-- card section 2 ------------------------------------------------------------->
         <section class="card-section">
             <div class="container">
                 <h6>{{ cardTitle[1].secondary }}</h6>
@@ -271,6 +274,7 @@ export default {
             </div>
         </section>
 
+        <!-- data and partners section 1 ------------------------------------------------------------->
         <section class="d-p-section">
             <div class="container">
                 <DataAndPartners 
@@ -280,6 +284,7 @@ export default {
             </div>
         </section>
 
+        <!-- card section 3 ------------------------------------------------------------->
         <section class="card-section">
             <div class="container">
                 <h6>{{ cardTitle[2].secondary }}</h6>
@@ -295,6 +300,7 @@ export default {
             </div>
         </section>
 
+        <!-- testimonials ------------------------------------------------------------->
         <section class="testimonials-section">
             <div>
                 <div class="comma-img">
@@ -315,6 +321,7 @@ export default {
             </div>
         </section>
 
+        <!-- card section 4 ------------------------------------------------------------->
         <section class="card-section">
             <div class="container">
                 <h6>{{ cardTitle[3].secondary }}</h6>
@@ -330,6 +337,7 @@ export default {
             </div>
         </section>
 
+        <!-- data and partners section 2 ------------------------------------------------------------->
         <section class="d-p-section">
             <div class="container">
                 <DataAndPartners 
@@ -338,12 +346,13 @@ export default {
                 />
             </div>
         </section>
-        <!-- <FormSection /> -->
+
+        <FormSection />
     </main>
 </template>
 
 <style lang="scss" scoped>
-// sezioen cards--------------------------------------------------------
+// sezione cards--------------------------------------------------------
 .card-section {
     background-color: white;
 

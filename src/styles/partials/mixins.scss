@@ -41,3 +41,11 @@
     padding: 0.5rem 1.5rem;
     cursor: pointer;
 }
+
+@mixin input-rules {
+    border: none;
+    background-color: $color-light;
+    outline: none;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
