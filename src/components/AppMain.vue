@@ -178,20 +178,51 @@ export default {
             dataAndPartners: {
                 firstData: [
                     {
-                        numbers: 158,
+                        dataType: "text",
+                        numbers: "158",
                         paragraphe: "SATISFIED CLIENTS"
                     },
                     {
+                        dataType: "text",
                         numbers: "3+",
                         paragraphe: "OUR PROJECTS"
                     },
                     {
+                        dataType: "text",
                         numbers: "1,906",
                         paragraphe: "CUP OF COFFEE"
                     },
                     {
+                        dataType: "text",
                         numbers: 2,
                         paragraphe: "OUR AWARDS"
+                    }
+                ],
+                secondData: [
+                    {
+                        dataType: "pic",
+                        numbers: "",
+                        paragraphe: "/cinema/img/assets/03.png"
+                    },
+                    {
+                        dataType: "pic",
+                        numbers: "",
+                        paragraphe: "/cinema/img/assets/04.png"
+                    },
+                    {
+                        dataType: "pic",
+                        numbers: "",
+                        paragraphe: "/cinema/img/assets/05.png"
+                    },
+                    {
+                        dataType: "pic",
+                        numbers: "",
+                        paragraphe: "/cinema/img/assets/01.png"
+                    },
+                    {
+                        dataType: "pic",
+                        numbers: "",
+                        paragraphe: "/cinema/img/assets/02.png"
                     }
                 ]
             }
@@ -299,7 +330,14 @@ export default {
             </div>
         </section>
 
-        <DataAndPartners />
+        <section class="d-p-section">
+            <div class="container">
+                <DataAndPartners 
+                 v-for="data in dataAndPartners.secondData"
+                 :data="data"
+                />
+            </div>
+        </section>
         <!-- <FormSection /> -->
     </main>
 </template>
