@@ -35,10 +35,10 @@ export default {
 
         div {
             width: 100%;
-            height: 6rem;
+            min-height: 6rem;
+            margin-bottom: 1rem;
 
             img {
-                height: auto;
                 object-fit: cover;
             }
 
@@ -52,5 +52,10 @@ export default {
 
     .first-width {
         width: 4rem;
+    }
+
+    .second-width {
+        width: 100%;
+        height: auto;
     }
 </style>

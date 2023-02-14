@@ -33,39 +33,77 @@ export default {
                 firstSection: [
                     {
                         img: "/cinema/img/assets/image (14).svg",
-                        title:"ARRAY OF EQUIPMENT",
+                        title: "ARRAY OF EQUIPMENT",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width"
                     },
                     {
                         img: "/cinema/img/assets/image (15).svg",
-                        title:"NEW TECHNOLOGIES",
+                        title: "NEW TECHNOLOGIES",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width"
                     },
                     {
                         img: "/cinema/img/assets/image (16).svg",
-                        title:"VERSITILE ACTORS",
+                        title: "VERSITILE ACTORS",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width"
                     },
                     {
                         img: "/cinema/img/assets/image (17).svg",
-                        title:"TOP DIRECTORS",
+                        title: "TOP DIRECTORS",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width"
                     },
                     {
                         img: "/cinema/img/assets/image (18).svg",
-                        title:"MINUTE EDITING",
+                        title: "MINUTE EDITING",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width"
                     },
                     {
                         img: "/cinema/img/assets/image (19).svg",
-                        title:"VERSITILE ACTORS",
+                        title: "VERSITILE ACTORS",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width"
+                    }
+                ],
+                secondSection: [
+                    {
+                        img: "/cinema/img/assets/Gallery-01.jpg",
+                        title: "SEVENTEENTH SUMMER",
+                        sentence: "Commercial, Music Video",
+                        imgWidth: "second-width"
+                    },
+                    {
+                        img: "/cinema/img/assets/Gallery-02.jpg",
+                        title: "A MESSAGE TO SPACE",
+                        sentence: "Short Film",
+                        imgWidth: "second-width"
+                    },
+                    {
+                        img: "/cinema/img/assets/Gallery-03.jpg",
+                        title: "THE MOST BEAUTIFUL THING",
+                        sentence: "Music Video",
+                        imgWidth: "second-width"
+                    },
+                    {
+                        img: "/cinema/img/assets/Gallery-04.jpg",
+                        title: "PERMISSION TO SPEAK",
+                        sentence: "Documentary",
+                        imgWidth: "second-width"
+                    },
+                    {
+                        img: "/cinema/img/assets/Gallery-05.jpg",
+                        title: "EXPLORE OUR SPACE",
+                        sentence: "Film noir",
+                        imgWidth: "second-width"
+                    },
+                    {
+                        img: "/cinema/img/assets/Gallery-06.jpg",
+                        title: "FILM PRODUCTION",
+                        sentence: "Blaxploitation",
+                        imgWidth: "second-width"
                     }
                 ]
             }
@@ -90,23 +128,38 @@ export default {
 
                 <div class="card-container">
                     <CardsSection 
-                    v-for="card in cardInfos.firstSection"
-                    :card="card"
-                />
+                     v-for="card in cardInfos.firstSection" 
+                     :card="card" 
+                    />
                 </div>
             </div>
         </section>
 
         <aboutUsSection />
-        <!-- <CardsSection />
-        <DataAndPartners />
+
+        <section class="card-section">
+            <div class="container">
+                <h6>{{ cardTitle[1].secondary }}</h6>
+
+                <h2>{{ cardTitle[1].main }}</h2>
+
+                <div class="card-container">
+                    <CardsSection 
+                     v-for="card in cardInfos.secondSection" 
+                     :card="card" 
+                    />
+                </div>
+            </div>
+        </section>
+        <!-- <DataAndPartners />
         <CardsSection /> -->
 
         <section class="testimonials-section">
             <div>
                 <div>DEBUG</div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nobis odio repudiandae ad aut inventore eligendi at explicabo dolorem illo?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nobis odio repudiandae ad aut
+                    inventore eligendi at explicabo dolorem illo?</p>
 
                 <div>
                     IMG PLACEHOLDER
@@ -123,38 +176,40 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    .card-section {
-        background-color: white;
+.card-section {
+    background-color: white;
 
-        .container {
-            @include container-size;
+    .container {
+        @include container-size;
 
-            h6, h2 {
-                text-align: center;
-                margin-bottom: 1rem;
-            }
-
-            .card-container {
-                width: 100%;
-                @include flex-card-container;
-            }
-        }
-    }
-    .end {
-        padding-left: 50%;
-    }
-
-    .testimonials-section {
-        padding: 4rem 0;
-
-        div {
-            width: 50%;
-            margin: 0 auto;
+        h6,
+        h2 {
             text-align: center;
+            margin-bottom: 1rem;
+        }
 
-            >*:not(:last-child) {
-                margin-bottom: 1rem;
-            }
+        .card-container {
+            width: 100%;
+            @include flex-card-container;
         }
     }
+}
+
+.end {
+    padding-left: 50%;
+}
+
+.testimonials-section {
+    padding: 4rem 0;
+
+    div {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+
+        >*:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}
 </style>
