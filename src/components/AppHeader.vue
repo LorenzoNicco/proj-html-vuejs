@@ -45,6 +45,25 @@ export default {
             </nav>
         </div>
 
+        <section class="jumbo-section">
+            <div class="container">
+                <div class="col">
+                    <h5>CINEMA STUDIO</h5>
+
+                    <h1>ACTION AND INSPIRE PEOPLE</h1>
+
+                    <button>READ MORE</button>
+                </div>
+            </div>
+
+            <div class="left arrow">
+                <img src="/cinema/img/assets/left-arrow.svg" alt="img">
+            </div>
+
+            <div class="right arrow">
+                <img src="/cinema/img/assets/right-arrow.svg" alt="img">
+            </div>
+        </section>
     </header>
 </template>
 
@@ -59,7 +78,7 @@ export default {
             padding: 0 2rem;
 
             .logo {
-                height: 3rem;
+                height: 2rem;
 
                 img {
                     height: 100%;
@@ -103,13 +122,60 @@ export default {
                     border-right: 1px solid $color-gray;
                     width: 5rem;
                     height: 1.5rem;
+                }
+            }
 
-                    img {
-                        height: 100%;
+        }
+
+        .jumbo-section {
+            width: 100%;
+            background-image: url("/cinema/img/assets/Parallax-03.jpg");
+            background-position: center;
+            position: relative;
+
+            .container {
+                width: 1000px;
+                margin: 0 auto;
+                padding: 10rem 0;
+
+                .col {
+                    width: 50%;
+                    color: white;
+
+                    h1 {
+                        margin: 1rem 0 2rem;
+                        font-size: 3rem;
+                    }
+
+                    button {
+                        @include white-btn;
                     }
                 }
             }
 
+            .arrow {
+                height: 2rem;
+                width: 2rem;
+                padding: 0.5rem;
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                z-index: 20;
+
+                img {
+                    height: 1rem;
+                    filter: invert(1);
+                }
+            }
+
+            .left {
+                top: 50%;
+                left: 1%;
+            }
+
+            .right {
+                top: 50%;
+                right: 1%;
+            }
         }
     }
 </style>

@@ -13,9 +13,9 @@ export default {
     <section class="about-us-section">
         <div class="container">
             <div class="col">
-                <h5>ABOUT US</h5>
+                <h6>ABOUT US</h6>
 
-                <h1>HIGH QUALITY CINEMATICS</h1>
+                <h2>HIGH QUALITY CINEMATICS</h2>
 
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime doloribus labore explicabo, eius minus, numquam voluptatibus iure doloremque ex pariatur sed minima! Architecto corrupti numquam non quae quibusdam itaque totam officiis quisquam. Itaque, voluptate quaerat necessitatibus illum ullam optio corrupti!</p>
 
@@ -40,7 +40,7 @@ export default {
                 width: 50%;
                 transform: translateX(100%);
     
-                h5 {
+                h6 {
                     margin-bottom: 1rem;
                 }
     
