@@ -54,17 +54,17 @@ export default {
             </div>
 
             <div class="fourth-menu">
-                <h4>DEBUG</h4>
+                <h4>NEWSLETTER</h4>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem et debitis illo tenetur veritatis autem?</p>
+                <p>Subscribe To Receive Inspiration, Ideas & News In Your Inbox.</p>
 
                 <input type="email" placeholder="Enter Your Email">
 
-                <button>SUBSCIRBE</button>
+                <button>SUBSCRIBE</button>
             </div>
         </section>
 
-        <p class="copyright">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto, ea corrupti debitis harum quaerat?</p>
+        <p class="copyright"><font-awesome-icon icon="fa-regular fa-copyright" class="icon" /> 2023 All Rights Reserved. Developed By TemplateMela</p>
     </footer>
 </template>
 
@@ -99,7 +99,15 @@ export default {
                 }
 
                 input {
-                    margin: 0.5rem 0;
+                    margin: 1rem 0;
+                    background-color: #1c1c1c;
+                    border: none;
+                    display: block;
+                    padding: 1rem;
+                }
+
+                button {
+                    padding: 1rem 2rem;
                 }
             }
 
@@ -124,6 +132,10 @@ export default {
                 }
 
             }
+            .fourth-menu p {
+                line-height: $line-height-media;
+                margin-top: 2rem;
+            }
         }
 
         .copyright {
@@ -132,6 +144,10 @@ export default {
             width: fit-content;
             text-align: center;
             color: #f2f2f2;
+
+            .icon {
+                font-size: 0.8rem;
+            }
         }
     }
 
