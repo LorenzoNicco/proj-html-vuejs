@@ -147,6 +147,32 @@ export default {
                         imgWidth: "second-width",
                         cardSize: "second-card-size"
                     },
+                ],
+                fourthSection: [
+                    {
+                        img: "/cinema/img/assets/blog07.jpg",
+                        date: "November 06, 2021 By Admin",
+                        title: "RECAP YOUR LATEST COMPANY EVENT",
+                        sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+                        imgWidth: "second-width",
+                        cardSize: "first-card-size"
+                    },
+                    {
+                        img: "/cinema/img/assets/blog01.jpg",
+                        date: "May 27, 2022 By Admin",
+                        title: "HOW TO EDIT A FILM SCORE TO SET",
+                        sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+                        imgWidth: "second-width",
+                        cardSize: "first-card-size"
+                    },
+                    {
+                        img: "/cinema/img/assets/blog02.jpg",
+                        date: "May 07, 2022 By Admin",
+                        title: "ARE YOU READY TO MAKE IT AWESOME",
+                        sentence: "Design is our playground. While we create an awesome experience, we like having fun. No animals",
+                        imgWidth: "second-width",
+                        cardSize: "first-card-size"
+                    }
                 ]
             },
             dataAndPartners: {
@@ -240,45 +266,73 @@ export default {
 
         <section class="testimonials-section">
             <div>
-                <div>DEBUG</div>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nobis odio repudiandae ad aut
-                    inventore eligendi at explicabo dolorem illo?</p>
-
-                <div>
-                    IMG PLACEHOLDER
+                <div class="comma-img">
+                    <img src="/cinema/img/assets/image (20).svg" alt="img">
                 </div>
 
-                <div>DEBUG</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo facere autem enim qui. Sunt fuga, eveniet nostrum deleniti ea quidem, nisi molestiae architecto similique unde voluptatibus impedit, ducimus quae molestias voluptas ut repellendus. Voluptatum eum sunt repellendus reprehenderit aperiam ex?</p>
+
+                <div class="profile-container">
+                    <img src="/cinema/img/assets/01.jpg" alt="img">
+
+                    <div>
+                        <h4>JOHN DOE</h4>
+
+                        <span>Designer</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- <CardsSection />
+        <section class="card-section">
+            <div class="container">
+                <h6>{{ cardTitle[3].secondary }}</h6>
+
+                <h2>{{ cardTitle[3].main }}</h2>
+
+                <div class="card-container">
+                    <CardsSection class="text-start"
+                     v-for="card in cardInfos.fourthSection" 
+                     :card="card" 
+                    />
+                </div>
+            </div>
+        </section>
+
         <DataAndPartners />
-        <FormSection /> -->
+        <!-- <FormSection /> -->
     </main>
 </template>
 
 <style lang="scss" scoped>
+// sezioen cards--------------------------------------------------------
 .card-section {
     background-color: white;
 
     .container {
         @include container-size;
 
-        h6,
-        h2 {
+        h6{
             text-align: center;
             margin-bottom: 1rem;
+        }
+
+        h2 {
+            text-align: center;
         }
 
         .card-container {
             width: 100%;
             @include flex-card-container;
         }
+
+        .text-start {
+            text-align: start;
+        }
     }
 }
 
+// sezione data and partners--------------------------------------------------------
 .d-p-section {
     background-image: url("/cinema/img/assets/Parallax-01.jpg");
     background-position: center;
@@ -289,16 +343,49 @@ export default {
     }
 }
 
+// sezione testimonials--------------------------------------------------------
 .testimonials-section {
-    padding: 4rem 0;
+    background-image: url("/cinema/img/assets/Parallax-02.jpg");
+    background-position: top;
 
-    div {
+    > div {
         width: 50%;
         margin: 0 auto;
         text-align: center;
+        @include container-small-size;
+        color: white;
 
         >*:not(:last-child) {
             margin-bottom: 1rem;
+        }
+
+        .comma-img {
+            height: 3rem;
+
+            img {
+                filter: invert(1);
+                height: 100%;
+            }
+        }
+
+        p {
+            line-height: $line-height-media;
+        }
+
+        .profile-container {
+            @include flex-center;
+
+            img {
+                margin-right: 0.5rem;
+                height: 4rem;
+                width: 4rem;
+                border-radius: 50%;
+            }
+
+            > div {
+                text-align: start;
+                line-height: 1.2rem;
+            }
         }
     }
 }

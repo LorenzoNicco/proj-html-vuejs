@@ -1,11 +1,9 @@
 <script>
-import { store } from "../store.js";
 
 export default {
     name: "CardsSection",
     data() {
         return {
-            store
         }
     },
     props: [
@@ -19,6 +17,8 @@ export default {
         <div>
             <img :src="card.img" :class="card.imgWidth" alt="img">
         </div>
+
+        <h6>{{ card.date }}</h6>
 
         <h5>{{ card.title }}</h5>
 
@@ -41,6 +41,11 @@ export default {
                 object-fit: cover;
             }
 
+        }
+
+        h6 {
+            margin-bottom: 1rem;
+            color: gray;
         }
         
         p {
