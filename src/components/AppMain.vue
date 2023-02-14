@@ -347,6 +347,7 @@ export default {
             </div>
         </section>
 
+        <!-- form section ------------------------------------------------------------->
         <FormSection />
     </main>
 </template>

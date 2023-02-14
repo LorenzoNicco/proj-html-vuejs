@@ -32,6 +32,45 @@ export default {
           name: "instagram",
           img: "/cinema/img/assets/image (12).svg"
         }
+      ],
+      footerMenu: [
+        {
+          title: "CONTACT INFO",
+          info:[
+            {
+            icon: "/cinema/img/assets/footer-location-dot-solid.svg",
+            text: "2/45 Tower Street, New York USA"
+            },
+            {
+              icon: "/cinema/img/assets/footer-phone-solid.svg",
+              text: "Call Us On 0800 840 1010"
+            },
+            {
+              icon: "/cinema/img/assets/footer-envelope-soli.svg",
+              text: "Demo@Example.Com"
+            }
+          ]
+        },
+        {
+          title: "INFORMATION",
+          info: [
+            "Product Support",
+            "Checkout",
+            "Report Abuse",
+            "Redeem Voucher",
+            "Order Status"
+          ]
+        },
+        {
+          title: "USEFUL LINKS",
+          info: [
+            "Policies & Rules",
+            "Privacy Policy",
+            "License Policy",
+            "My Account",
+            "Locally"
+          ]
+        }
       ]
     }
   },
@@ -51,7 +90,9 @@ export default {
 
   <AppMain />
 
-  <AppFooter />
+  <AppFooter 
+   :menu="footerMenu"
+  />
 </template>
 
 <style lang="scss">
