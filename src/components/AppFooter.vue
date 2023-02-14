@@ -108,6 +108,7 @@ export default {
 
                 button {
                     padding: 1rem 2rem;
+                    cursor: pointer;
                 }
             }
 
@@ -132,6 +133,13 @@ export default {
                 }
 
             }
+
+            .second-menu  li:hover,
+            .third-menu  li:hover {
+                filter: brightness(2);
+                cursor: pointer;
+            }
+
             .fourth-menu p {
                 line-height: $line-height-media;
                 margin-top: 2rem;

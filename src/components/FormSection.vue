@@ -84,6 +84,7 @@ export default {
                     background-color: black;
                     color: white;
                     line-height: 2rem;
+                    cursor: pointer;
                 }
             }
         }

@@ -131,6 +131,7 @@ export default {
                 border: none;
                 margin-left: 1rem;
                 vertical-align: middle;
+                cursor: pointer;
                 
                 img {
                     height: 100%;
