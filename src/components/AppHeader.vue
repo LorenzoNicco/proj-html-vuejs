@@ -80,13 +80,9 @@ export default {
             @include flex-between;
             height: 100%;
 
-
-
             li {
                 padding: 2rem 0.5rem;
                 height: 100%;
-
-
             }
         }
         
