@@ -45,7 +45,7 @@ export default {
         }
         
         p {
-            line-height: 1.5rem;
+            line-height: $line-height-media;
             margin-top: 1rem;
         }
     }

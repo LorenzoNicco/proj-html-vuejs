@@ -1,7 +1,7 @@
 <script>
 import { store } from "../store.js";
 
-import JumboSection from "./JumboSection.vue";
+import aboutUsSection from "./aboutUsSection.vue";
 import DataAndPartners from "./DataAndPartners.vue";
 import CardsSection from "./CardsSection.vue";
 import FormSection from "./FormSection.vue";
@@ -72,7 +72,7 @@ export default {
         }
     },
     components: {
-        JumboSection,
+        aboutUsSection,
         DataAndPartners,
         CardsSection,
         FormSection
@@ -94,10 +94,10 @@ export default {
                     :card="card"
                 />
                 </div>
-
             </div>
         </section>
-        <JumboSection class="end"/>
+
+        <aboutUsSection />
         <!-- <CardsSection />
         <DataAndPartners />
         <CardsSection /> -->

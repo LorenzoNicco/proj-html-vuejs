@@ -1,6 +1,5 @@
 <script>
 import { store } from "../store.js";
-import JumboSection from "./JumboSection.vue";
 
 export default {
     name: "AppHeader",
@@ -10,7 +9,6 @@ export default {
         }
     },
     components: {
-        JumboSection
     },
     props: [
         "link",
@@ -47,7 +45,6 @@ export default {
             </nav>
         </div>
 
-        <JumboSection />
     </header>
 </template>
 
