@@ -7,13 +7,34 @@ export default {
   data() {
     return {
       headerMenu: [
-        "HOME",
-        "BLOG",
-        "PAGES",
-        "ABOUT",
-        "CONTACTS",
-        "GALLERY",
-        "SHOP"
+        {
+          index: "HOME",
+          arrow: "arrow-no"
+        },
+        {
+          index: "BLOG",
+          arrow: "arrow-no"
+        },
+        {
+          index: "PAGES",
+          arrow: "arrow-yes"
+        },
+        {
+          index: "ABOUT",
+          arrow: "arrow-no"
+        },
+        {
+          index: "CONTACTS",
+          arrow: "arrow-no"
+        },
+        {
+          index: "GALLERY",
+          arrow: "arrow-no"
+        },
+        {
+          index: "SHOP",
+          arrow: "arrow-yes"
+        },
       ],
       headerIcons: [
         {

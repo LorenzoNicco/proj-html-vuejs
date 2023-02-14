@@ -26,7 +26,11 @@ export default {
 
             <nav>
                 <ul class="header-menu">
-                    <li v-for="index in link">{{ index }}</li>
+                    <li v-for="index in link">
+                        <span>{{ index.index }}</span>
+                        
+                        <font-awesome-icon icon="fa-solid fa-chevron-down" :class="index.arrow" />
+                    </li>
                 </ul>
             </nav>
 
@@ -71,6 +75,7 @@ export default {
     // @import "../styles/partials/debug.scss";
 
     header {
+        // HEADER TOP ---------------------------------------------------------
         .header-top {
             height: 5rem;
             width: 100%;
@@ -87,6 +92,7 @@ export default {
             }
         }
 
+        // PRIMO NAV ---------------------------------------------------------
         nav:first-child {
             height: 100%;
         }
@@ -99,9 +105,21 @@ export default {
             li {
                 padding: 2rem 0.5rem;
                 height: 100%;
+                cursor: pointer;
+            }
+
+            .arrow-yes {
+                display: inline-block;
+                margin-left: 0.5rem;
+                font-size: 0.5rem;
+            }
+
+            .arrow-no {
+                display: none;
             }
         }
         
+        // SECONDO NAV ---------------------------------------------------------
         .header-icons {
             list-style: none;
             @include flex-between;
@@ -127,6 +145,7 @@ export default {
 
         }
 
+        // JUMBO SECTION ---------------------------------------------------------
         .jumbo-section {
             width: 100%;
             background-image: url("/cinema/img/assets/Parallax-03.jpg");
@@ -153,6 +172,7 @@ export default {
                 }
             }
 
+            // ARROWS ---------------------------------------------------------
             .arrow {
                 height: 2rem;
                 width: 2rem;
