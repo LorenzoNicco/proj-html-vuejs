@@ -8,78 +8,74 @@ export default {
             store,
             slideIndex: 0,
             autoplay: null,
-            moving: "",
             innerStyles: {},
-            step: '',
-            innerWidth: 1000,
-            transitioning: false
+            transitioning: false,
+            jumboSize: "1000px"
         }
     },
     props: [
         "carousel"
     ],
     methods: {
-        setStep () {
-            const totalCards = this.store.jumbo.length;
-            this.step = `${this.innerWidth}px`;
-        },
 
         next () {
-            if (this.transitioning) return
-            this.transitioning = true
-            this.moveLeft()
+            if (this.transitioning) 
+            return this.transitioning = true; //il movimento comincia quando transitioning diventa true
+
+            this.moveLeft();
+
             this.afterTransition(() => {
-                const card = this.store.jumbo.shift()
-                this.store.jumbo.push(card)
-                this.resetTranslate()
+                const card = this.store.jumbo.shift() //shift rimuove il primo elemento di un array, creando una costante con esso, e lasciando l'array con gli elementi rimanenti
+                this.store.jumbo.push(card) //con questa funzione, pushiamo nuovamente l'elemento tolto prima nell'array, così da farl odiventare l'ultimo della lista
+                this.resetTranslate() //resetta la posizione delle card dopo aver fatto scorrere il container
                 this.transitioning = false
-            })
+            });
         },
 
         prev () {
-            if (this.transitioning) return
-            this.transitioning = true
-            this.moveRight()
+            if (this.transitioning)
+            return this.transitioning = true;
+
+            this.moveRight();
+
             this.afterTransition(() => {
-                const card = this.store.jumbo.pop()
-                this.store.jumbo.unshift(card)
+                const card = this.store.jumbo.pop() //uguale a shift, ma agisce sull'ultimo elemento dell'array
+                this.store.jumbo.unshift(card) //uguale a push, ma mette l'elemento all'inizio dell'array
                 this.resetTranslate()
                 this.transitioning = false
-            })
+            });
         },
 
 
         moveLeft () {
             this.innerStyles = {
-                transform: `translateX(-${this.step})
-                            translateX(-${this.step})`
+                transform: `translateX(-${this.jumboSize})
+                            translateX(-${this.jumboSize})` //il secondo translate serve a far si che tutte le trasformazioni successive comincino da quel punto (cioè - la larchezza dell'ooggetto)
             }
         },
 
         moveRight () {
             this.innerStyles = {
-                transform: `translateX(${this.step})
-                            translateX(-${this.step})`
+                transform: `translateX(${this.jumboSize})
+                            translateX(-${this.jumboSize})` //il secondo translate serve a far si che tutte le trasformazioni successive comincino da quel punto (cioè - la larchezza dell'ooggetto)
             }
         },
         afterTransition (callback) {
             const listener = () => {
                 callback()
-                this.$refs.inner.removeEventListener('transitionend', listener)
+                this.$refs.inner.removeEventListener('transitionend', listener) //$ref si riferisce all'elemento che ha la proprietà ref
             }
             this.$refs.inner.addEventListener('transitionend', listener)
         },
 
         resetTranslate () {
             this.innerStyles = {
-                transition: 'none',
-                transform: `translateX(-${this.step})`
+                transition: 'none', //azzerando la transition, abbiamo un ritorno istantaneo alla situazione iniziale del container
+                transform: `translateX(-${this.jumboSize})` //riporta indietro la card
             }
         }
     },
     mounted () {
-        this.setStep()
-
         this.autoplay = setInterval(this.next, 3000);        
     },
 
