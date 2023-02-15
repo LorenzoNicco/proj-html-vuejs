@@ -1,14 +1,18 @@
 <script>
 import { store } from "../store.js";
 
+import SliderSection from "./SliderSection.vue";
+
 export default {
     name: "AppHeader",
     data() {
         return {
-            store
+            store,
+            carousel: store.jumbo.length
         }
     },
     components: {
+        SliderSection
     },
     props: [
         "link",
@@ -55,24 +59,9 @@ export default {
             </nav>
         </div>
 
+        <!-- JUMBO SECTION ----------------------------------------------------------->
         <section class="jumbo-section">
-            <div class="container">
-                <div class="col">
-                    <h5>CINEMA STUDIO</h5>
-
-                    <h1>ACTION AND INSPIRE PEOPLE</h1>
-
-                    <button>READ MORE</button>
-                </div>
-            </div>
-
-            <div class="left arrow">
-                <img src="/cinema/img/assets/left-arrow.svg" alt="img">
-            </div>
-
-            <div class="right arrow">
-                <img src="/cinema/img/assets/right-arrow.svg" alt="img">
-            </div>
+            <SliderSection :carousel="carousel"/>
         </section>
     </header>
 </template>
@@ -197,54 +186,7 @@ export default {
             width: 100%;
             background-image: url("/cinema/img/assets/Parallax-03.jpg");
             background-position: center;
-            position: relative;
             filter: brightness(1.5);
-
-            .container {
-                width: 1000px;
-                margin: 0 auto;
-                padding: 10rem 0;
-                filter: brightness(0.65);
-
-                .col {
-                    width: 50%;
-                    color: white;
-
-                    h1 {
-                        margin: 1rem 0 2rem;
-                        font-size: 3rem;
-                    }
-
-                    button {
-                        @include white-btn;
-                    }
-                }
-            }
-
-            // ARROWS ---------------------------------------------------------
-            .arrow {
-                height: 2rem;
-                width: 2rem;
-                padding: 0.5rem;
-                background-color: rgba(0, 0, 0, 0.5);
-                position: absolute;
-                z-index: 20;
-
-                img {
-                    height: 1rem;
-                    filter: invert(1);
-                }
-            }
-
-            .left {
-                top: 50%;
-                left: 1%;
-            }
-
-            .right {
-                top: 50%;
-                right: 1%;
-            }
         }
     }
 </style>

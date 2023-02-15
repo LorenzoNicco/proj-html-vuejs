@@ -307,21 +307,6 @@ export default {
         <section class="testimonials-section">
             <div>
                 <SliderSection :carousel="carousel"/>
-                <!-- <div class="comma-img">
-                    <img src="/cinema/img/assets/image (20).svg" alt="img">
-                </div>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo facere autem enim qui. Sunt fuga, eveniet nostrum deleniti ea quidem, nisi molestiae architecto similique unde voluptatibus impedit, ducimus quae molestias voluptas ut repellendus. Voluptatum eum sunt repellendus reprehenderit aperiam ex?</p>
-
-                <div class="profile-container">
-                    <img src="/cinema/img/assets/01.jpg" alt="img">
-
-                    <div>
-                        <h4>JOHN DOE</h4>
-
-                        <span>Designer</span>
-                    </div>
-                </div> -->
             </div>
         </section>
 
@@ -399,46 +384,5 @@ export default {
 .testimonials-section {
     background-image: url("/cinema/img/assets/Parallax-02.jpg");
     background-position: top;
-
-//     > div {
-//         width: 50%;
-//         margin: 0 auto;
-//         text-align: center;
-//         @include container-small-size;
-//         color: white;
-
-//         // >*:not(:last-child) {
-//         //     margin-bottom: 1rem;
-//         // }
-
-//         // .comma-img {
-//         //     height: 3rem;
-
-//         //     img {
-//         //         filter: invert(1);
-//         //         height: 100%;
-//         //     }
-//         // }
-
-//         // p {
-//         //     line-height: $line-height-media;
-//         // }
-
-//         // .profile-container {
-//         //     @include flex-center;
-
-//         //     img {
-//         //         margin-right: 0.5rem;
-//         //         height: 4rem;
-//         //         width: 4rem;
-//         //         border-radius: 50%;
-//         //     }
-
-//         //     > div {
-//         //         text-align: start;
-//         //         line-height: 1.2rem;
-//         //     }
-//         // }
-//     }
 }
 </style>

@@ -39,8 +39,27 @@ export default {
 </script>
 
 <template>
+    <div v-if="carousel == store.jumbo.length" class="slide jumbotron">
+        <div class="container">
+            <div class="col">
+                <h5>{{ store.jumbo[slideIndex].secondaryTitle }}</h5>
+
+                <h1>{{ store.jumbo[slideIndex].mainTitle }}</h1>
+
+                <button>READ MORE</button>
+            </div>
+        </div>
+
+        <div class="left arrow" @click="prevSlide">
+            <img src="/cinema/img/assets/left-arrow.svg" alt="img">
+        </div>
+
+        <div class="right arrow" @click="nextSlide">
+            <img src="/cinema/img/assets/right-arrow.svg" alt="img">
+        </div>
+    </div>
     <!-- SEZIONE TESTIMONIALS ------------------------------------------------------------------------------------->
-    <div class="slide testimonials">
+    <div v-else-if="carousel == store.testimonials.length" class="slide testimonials">
         <div class="comma-img">
             <img src="/cinema/img/assets/image (20).svg" alt="img">
         </div>
@@ -66,6 +85,58 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    //  sezione jumbotron---------------------------------------------------------------------------------------
+    .jumbotron {
+        width: 100%;
+        position: relative;
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 10rem 0;
+            filter: brightness(0.65);
+
+            .col {
+                width: 50%;
+                color: white;
+
+                h1 {
+                    height: 96px;
+                    margin: 1rem 0 2rem;
+                    font-size: 3rem;
+                }
+
+                button {
+                    @include white-btn;
+                }
+            }
+        }
+
+        // ARROWS ---------------------------------------------------------
+        .arrow {
+            height: 2rem;
+            width: 2rem;
+            padding: 0.5rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            z-index: 20;
+
+            img {
+                height: 1rem;
+                filter: invert(1);
+            }
+        }
+
+        .left {
+            top: 50%;
+            left: 1%;
+        }
+
+        .right {
+            top: 50%;
+            right: 1%;
+        }
+    }
     // sezione testimonials-------------------------------------------------------------------------------------
     .testimonials {
         width: 50%;

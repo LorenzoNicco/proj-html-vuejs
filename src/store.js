@@ -1,6 +1,24 @@
 import { reactive } from "vue"
 
 export const store = reactive ({
+    jumbo: [
+        {
+            secondaryTitle: "CINEMA STUDIO",
+            mainTitle: "ACTION AND INSPIRE PEOPLE",
+        },
+        {
+            secondaryTitle: "TV SHOW STUDIO",
+            mainTitle: "ADVENTURES EVERYDAY",
+        },
+        {
+            secondaryTitle: "DOCUMENTARY STUDIO",
+            mainTitle: "THE BEAUTY OF OUR PLANET",
+        },
+        {
+            secondaryTitle: "MUSIC VIDEO STUDIO",
+            mainTitle: "MUSIC IN MOTION",
+        }
+    ],
     testimonials: [
         {
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo facere autem enim qui. Sunt fuga, eveniet nostrum deleniti ea quidem, nisi molestiae architecto similique unde voluptatibus impedit, ducimus quae molestias voluptas ut repellendus. Voluptatum eum sunt repellendus reprehenderit aperiam ex?",
