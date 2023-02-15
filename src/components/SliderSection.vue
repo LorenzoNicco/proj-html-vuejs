@@ -61,7 +61,7 @@ export default {
     <!-- SEZIONE TESTIMONIALS ------------------------------------------------------------------------------------->
     <div v-else-if="carousel == store.testimonials.length" class="slide testimonials">
         <div class="comma-img">
-            <img src="/cinema/img/assets/image (20).svg" alt="img">
+            <img src="/cinema/img/assets/image-20.svg" alt="img">
         </div>
 
         <p>{{ store.testimonials[slideIndex].text }}</p>

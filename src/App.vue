@@ -49,19 +49,19 @@ export default {
       headerIcons: [
         {
           name: "facebook",
-          img: "/cinema/img/assets/image (9).svg"
+          img: "/cinema/img/assets/image-9.svg"
         },
         {
           name: "twitter",
-          img: "/cinema/img/assets/image (10).svg"
+          img: "/cinema/img/assets/image-10.svg"
         },
         {
           name: "youtube",
-          img: "/cinema/img/assets/image (11).svg"
+          img: "/cinema/img/assets/image-11.svg"
         },
         {
           name: "instagram",
-          img: "/cinema/img/assets/image (12).svg"
+          img: "/cinema/img/assets/image-12.svg"
         }
       ],
       footerMenu: [

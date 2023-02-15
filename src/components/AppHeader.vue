@@ -49,7 +49,7 @@ export default {
             <nav>
                 <ul class="header-icons">
                     <button class="search-btn">
-                        <img class="search-icon" src="/cinema/img/assets/image (8).svg" alt="">
+                        <img class="search-icon" src="/cinema/img/assets/image-8.svg" alt="">
                     </button>
 
                     <li v-for="index in icons">
@@ -63,9 +63,9 @@ export default {
 
         <!-- JUMBO SECTION ----------------------------------------------------------->
         <section class="jumbo-section">
-            <!-- <SliderSection :carousel="carousel"/> -->
+            <SliderSection :carousel="carousel"/>
 
-            <SliderSectionVerTwo :carousel="carousel"/>
+            <!-- <SliderSectionVerTwo :carousel="carousel"/> -->
         </section>
     </header>
 </template>

@@ -35,42 +35,42 @@ export default {
             cardInfos: {
                 firstSection: [
                     {
-                        img: "/cinema/img/assets/image (14).svg",
+                        img: "/cinema/img/assets/image-14.svg",
                         title: "ARRAY OF EQUIPMENT",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width",
                         cardSize: "first-card-size"
                     },
                     {
-                        img: "/cinema/img/assets/image (15).svg",
+                        img: "/cinema/img/assets/image-15.svg",
                         title: "NEW TECHNOLOGIES",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width",
                         cardSize: "first-card-size"
                     },
                     {
-                        img: "/cinema/img/assets/image (16).svg",
+                        img: "/cinema/img/assets/image-16.svg",
                         title: "VERSITILE ACTORS",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width",
                         cardSize: "first-card-size"
                     },
                     {
-                        img: "/cinema/img/assets/image (17).svg",
+                        img: "/cinema/img/assets/image-17.svg",
                         title: "TOP DIRECTORS",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width",
                         cardSize: "first-card-size"
                     },
                     {
-                        img: "/cinema/img/assets/image (18).svg",
+                        img: "/cinema/img/assets/image-18.svg",
                         title: "MINUTE EDITING",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width",
                         cardSize: "first-card-size"
                     },
                     {
-                        img: "/cinema/img/assets/image (19).svg",
+                        img: "/cinema/img/assets/image-19.svg",
                         title: "VERSITILE ACTORS",
                         sentence: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
                         imgWidth: "first-width",

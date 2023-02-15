@@ -114,7 +114,7 @@ export default {
     <!-- SEZIONE TESTIMONIALS ------------------------------------------------------------------------------------->
     <div v-else-if="carousel == store.testimonials.length" class="slide testimonials">
         <div class="comma-img">
-            <img src="/cinema/img/assets/image (20).svg" alt="img">
+            <img src="/cinema/img/assets/image-20.svg" alt="img">
         </div>
 
         <p>{{ store.testimonials[slideIndex].text }}</p>
@@ -153,7 +153,7 @@ export default {
                 padding: 10rem 0;
                 filter: brightness(0.65);
                 @include flex-start;
-                transition: transform 0.2s;
+                transition: transform 0.5s;
                 
                 
                 .col {
