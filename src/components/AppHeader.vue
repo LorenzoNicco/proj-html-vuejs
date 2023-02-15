@@ -63,9 +63,9 @@ export default {
 
         <!-- JUMBO SECTION ----------------------------------------------------------->
         <section class="jumbo-section">
-            <!-- <SliderSection :carousel="carousel"/> -->
+            <SliderSection :carousel="carousel"/>
 
-            <SliderSectionVerTwo :carousel="carousel"/>
+            <!-- <SliderSectionVerTwo :carousel="carousel"/> -->
         </section>
     </header>
 </template>
