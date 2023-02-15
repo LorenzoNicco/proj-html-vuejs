@@ -9,31 +9,40 @@ export default {
       headerMenu: [
         {
           index: "HOME",
-          arrow: "arrow-no"
+          arrow: "arrow-no",
+          dropdownDisplay: "dropdown-menu-no"
         },
         {
           index: "BLOG",
-          arrow: "arrow-no"
+          arrow: "arrow-no",
+          dropdownDisplay: "dropdown-menu-no"
         },
         {
           index: "PAGES",
-          arrow: "arrow-yes"
+          arrow: "arrow-yes",
+          dropdownDisplay: "dropdown-menu-yes",
+          dropdownItems: ["SERVICES", "OUR WORK FLOW", "VIDEO THUMBNAIL TYPE"]
         },
         {
           index: "ABOUT",
-          arrow: "arrow-no"
+          arrow: "arrow-no",
+          dropdownDisplay: "dropdown-menu-no"
         },
         {
           index: "CONTACTS",
-          arrow: "arrow-no"
+          arrow: "arrow-no",
+          dropdownDisplay: "dropdown-menu-no"
         },
         {
           index: "GALLERY",
-          arrow: "arrow-no"
+          arrow: "arrow-no",
+          dropdownDisplay: "dropdown-menu-no"
         },
         {
           index: "SHOP",
-          arrow: "arrow-yes"
+          arrow: "arrow-yes",
+          dropdownDisplay: "dropdown-menu-yes",
+          dropdownItems: ["OUR STORE", "DISCOUNT", "SPECIAL OFFER"]
         },
       ],
       headerIcons: [

@@ -104,6 +104,8 @@ export default {
                     border: none;
                     display: block;
                     padding: 1rem;
+                    outline: none;
+                    color: white;
                 }
 
                 button {

@@ -30,6 +30,12 @@ export default {
                         <span>{{ index.index }}</span>
                         
                         <font-awesome-icon icon="fa-solid fa-chevron-down" :class="index.arrow" />
+
+                        <ul class="dropdown-menu" v-if="index.dropdownDisplay == 'dropdown-menu-yes'">
+                            <li v-for="item in index.dropdownItems">
+                                <a href="#">{{ item }}</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
@@ -81,6 +87,11 @@ export default {
             width: 100%;
             @include flex-between;
             padding: 0 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 30;
+            background-color: white;
 
             .logo {
                 height: 2rem;
@@ -106,6 +117,11 @@ export default {
                 padding: 2rem 0.5rem;
                 height: 100%;
                 cursor: pointer;
+                position: relative;
+
+                &:hover .dropdown-menu {
+                    display: block;
+                }
             }
 
             .arrow-yes {
@@ -116,6 +132,31 @@ export default {
 
             .arrow-no {
                 display: none;
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                left: 0;
+                top: 100%;
+                z-index: 50;
+                list-style: none;
+                display: none;
+                background-color: black;
+                width: 15rem;
+
+                > li {
+                    display: block;
+                    padding: 1rem;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid darkgray;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
             }
         }
         
@@ -148,15 +189,18 @@ export default {
 
         // JUMBO SECTION ---------------------------------------------------------
         .jumbo-section {
+            margin-top: 5rem;
             width: 100%;
             background-image: url("/cinema/img/assets/Parallax-03.jpg");
             background-position: center;
             position: relative;
+            filter: brightness(1.5);
 
             .container {
                 width: 1000px;
                 margin: 0 auto;
                 padding: 10rem 0;
+                filter: brightness(0.65);
 
                 .col {
                     width: 50%;
