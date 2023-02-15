@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-    <header>
+    <header id="header">
         <div class="header-top">
             <div class="logo">
                 <img src="/cinema/img/assets/logo.svg" alt="logo">

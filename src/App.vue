@@ -2,6 +2,7 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
+import ScrollUpButton from "./components/ScrollUpButton.vue";
 
 export default {
   data() {
@@ -107,6 +108,7 @@ export default {
   components: {
     AppHeader,
     AppMain,
+    ScrollUpButton,
     AppFooter
   }
 }
@@ -119,6 +121,8 @@ export default {
   />
 
   <AppMain />
+
+  <ScrollUpButton />
 
   <AppFooter 
    :menu="footerMenu"

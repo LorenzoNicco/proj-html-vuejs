@@ -308,9 +308,7 @@ export default {
         <!-- testimonials ------------------------------------------------------------->
         <section class="testimonials-section">
             <div>
-                <!-- <SliderSection :carousel="carousel"/> -->
-
-                <SliderSectionVerTwo :carousel="carousel"/>
+                <SliderSection :carousel="carousel"/>
             </div>
         </section>
 
