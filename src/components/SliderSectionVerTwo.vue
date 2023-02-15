@@ -2,59 +2,112 @@
 import { store } from "../store.js";
 
 export default {
-    name: "SliderSection",
+    name: "SliderSectionVerTwo",
     data () {
         return {
             store,
             slideIndex: 0,
-            autoplay: null
+            autoplay: null,
+            moving: "",
+            innerStyles: {},
+            step: '',
+            innerWidth: 1000,
+            transitioning: false
         }
     },
     props: [
         "carousel"
     ],
     methods: {
-        nextSlide () {
-            if (this.slideIndex < this.carousel - 1) {
-                this.slideIndex++;
-            }
-            else if (this.slideIndex == this.carousel - 1) {
-                this.slideIndex = 0;
+        setStep () {
+            const totalCards = this.store.jumbo.length;
+            this.step = `${this.innerWidth}px`;
+        },
+
+        next () {
+            if (this.transitioning) return
+            this.transitioning = true
+            this.moveLeft()
+            this.afterTransition(() => {
+                const card = this.store.jumbo.shift()
+                this.store.jumbo.push(card)
+                this.resetTranslate()
+                this.transitioning = false
+            })
+        },
+
+        prev () {
+            if (this.transitioning) return
+            this.transitioning = true
+            this.moveRight()
+            this.afterTransition(() => {
+                const card = this.store.jumbo.pop()
+                this.store.jumbo.unshift(card)
+                this.resetTranslate()
+                this.transitioning = false
+            })
+        },
+
+
+        moveLeft () {
+            this.innerStyles = {
+                transform: `translateX(-${this.step})
+                            translateX(-${this.step})`
             }
         },
-        prevSlide () {
-            if (this.slideIndex > 0) {
-                this.slideIndex--;
-            }
-            else if (this.slideIndex == 0) {
-                this.slideIndex = this.carousel - 1;
+
+        moveRight () {
+            this.innerStyles = {
+                transform: `translateX(${this.step})
+                            translateX(-${this.step})`
             }
         },
+        afterTransition (callback) {
+            const listener = () => {
+                callback()
+                this.$refs.inner.removeEventListener('transitionend', listener)
+            }
+            this.$refs.inner.addEventListener('transitionend', listener)
+        },
+
+        resetTranslate () {
+            this.innerStyles = {
+                transition: 'none',
+                transform: `translateX(-${this.step})`
+            }
+        }
     },
     mounted () {
-        this.autoplay = setInterval(this.nextSlide, 3000);
-    }
+        this.setStep()
+
+        this.autoplay = setInterval(this.next, 3000);        
+    },
+
     
 }
 </script>
 
 <template>
     <div v-if="carousel == store.jumbo.length" class="slide jumbotron">
-        <div class="container">
-            <div class="col">
-                <h5>{{ store.jumbo[slideIndex].secondaryTitle }}</h5>
-
-                <h1>{{ store.jumbo[slideIndex].mainTitle }}</h1>
-
-                <button>READ MORE</button>
+        <div class="external">
+            <div class="inner" ref="inner"  :style="innerStyles">
+                <div class="col" v-for="index in store.jumbo"  :key="card">
+                    <h5>{{ index.secondaryTitle }}</h5>
+    
+                    <h1>{{ index.mainTitle }}</h1>
+    
+                    <button>READ MORE</button>
+                </div>
             </div>
+
         </div>
 
-        <div class="left arrow" @click="prevSlide()">
+
+        <div class="left arrow" @click="prev">
             <img src="/cinema/img/assets/left-arrow.svg" alt="img">
         </div>
 
-        <div class="right arrow" @click="nextSlide()">
+        <div class="right arrow" @click="next">
             <img src="/cinema/img/assets/right-arrow.svg" alt="img">
         </div>
     </div>
@@ -90,26 +143,37 @@ export default {
         width: 100%;
         position: relative;
 
-        .container {
+        .external {
             width: 1000px;
+            overflow: hidden;
             margin: 0 auto;
-            padding: 10rem 0;
-            filter: brightness(0.65);
-
-            .col {
-                width: 50%;
-                color: white;
-
-                h1 {
-                    height: 96px;
-                    margin: 1rem 0 2rem;
-                    font-size: 3rem;
-                }
-
-                button {
-                    @include white-btn;
+            .inner {
+                width: 1000px;
+                margin: 0 auto;
+                padding: 10rem 0;
+                filter: brightness(0.65);
+                @include flex-start;
+                transition: transform 0.2s;
+                
+                
+                .col {
+                    width: 500px;
+                    margin-right: 500px;
+                    color: white;
+                    
+                    h1 {
+                        height: 96px;
+                        width: 500px;
+                        margin: 1rem 0 2rem;
+                        font-size: 3rem;
+                    }
+    
+                    button {
+                        @include white-btn;
+                    }
                 }
             }
+
         }
 
         // ARROWS ---------------------------------------------------------

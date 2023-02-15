@@ -6,6 +6,7 @@ import DataAndPartners from "./DataAndPartners.vue";
 import CardsSection from "./CardsSection.vue";
 import FormSection from "./FormSection.vue";
 import SliderSection from "./SliderSection.vue";
+import SliderSectionVerTwo from "./SliderSectionVerTwo.vue";
 
 export default {
     name: "AppMain",
@@ -235,7 +236,8 @@ export default {
         DataAndPartners,
         CardsSection,
         FormSection,
-        SliderSection
+        SliderSection,
+        SliderSectionVerTwo
     }
 }
 </script>
@@ -306,7 +308,9 @@ export default {
         <!-- testimonials ------------------------------------------------------------->
         <section class="testimonials-section">
             <div>
-                <SliderSection :carousel="carousel"/>
+                <!-- <SliderSection :carousel="carousel"/> -->
+
+                <SliderSectionVerTwo :carousel="carousel"/>
             </div>
         </section>
 

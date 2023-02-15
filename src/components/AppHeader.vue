@@ -2,6 +2,7 @@
 import { store } from "../store.js";
 
 import SliderSection from "./SliderSection.vue";
+import SliderSectionVerTwo from "./SliderSectionVerTwo.vue";
 
 export default {
     name: "AppHeader",
@@ -12,7 +13,8 @@ export default {
         }
     },
     components: {
-        SliderSection
+        SliderSection,
+        SliderSectionVerTwo
     },
     props: [
         "link",
@@ -61,7 +63,9 @@ export default {
 
         <!-- JUMBO SECTION ----------------------------------------------------------->
         <section class="jumbo-section">
-            <SliderSection :carousel="carousel"/>
+            <!-- <SliderSection :carousel="carousel"/> -->
+
+            <SliderSectionVerTwo :carousel="carousel"/>
         </section>
     </header>
 </template>
