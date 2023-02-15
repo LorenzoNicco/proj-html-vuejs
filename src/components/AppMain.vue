@@ -5,12 +5,14 @@ import aboutUsSection from "./aboutUsSection.vue";
 import DataAndPartners from "./DataAndPartners.vue";
 import CardsSection from "./CardsSection.vue";
 import FormSection from "./FormSection.vue";
+import SliderSection from "./SliderSection.vue";
 
 export default {
     name: "AppMain",
     data() {
         return {
             store,
+            carousel: store.testimonials.length,
             cardTitle: [
                 {
                     secondary: "PELICULA STUDIO",
@@ -232,7 +234,8 @@ export default {
         aboutUsSection,
         DataAndPartners,
         CardsSection,
-        FormSection
+        FormSection,
+        SliderSection
     }
 }
 </script>
@@ -303,7 +306,8 @@ export default {
         <!-- testimonials ------------------------------------------------------------->
         <section class="testimonials-section">
             <div>
-                <div class="comma-img">
+                <SliderSection :carousel="carousel"/>
+                <!-- <div class="comma-img">
                     <img src="/cinema/img/assets/image (20).svg" alt="img">
                 </div>
 
@@ -317,7 +321,7 @@ export default {
 
                         <span>Designer</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -396,45 +400,45 @@ export default {
     background-image: url("/cinema/img/assets/Parallax-02.jpg");
     background-position: top;
 
-    > div {
-        width: 50%;
-        margin: 0 auto;
-        text-align: center;
-        @include container-small-size;
-        color: white;
+//     > div {
+//         width: 50%;
+//         margin: 0 auto;
+//         text-align: center;
+//         @include container-small-size;
+//         color: white;
 
-        >*:not(:last-child) {
-            margin-bottom: 1rem;
-        }
+//         // >*:not(:last-child) {
+//         //     margin-bottom: 1rem;
+//         // }
 
-        .comma-img {
-            height: 3rem;
+//         // .comma-img {
+//         //     height: 3rem;
 
-            img {
-                filter: invert(1);
-                height: 100%;
-            }
-        }
+//         //     img {
+//         //         filter: invert(1);
+//         //         height: 100%;
+//         //     }
+//         // }
 
-        p {
-            line-height: $line-height-media;
-        }
+//         // p {
+//         //     line-height: $line-height-media;
+//         // }
 
-        .profile-container {
-            @include flex-center;
+//         // .profile-container {
+//         //     @include flex-center;
 
-            img {
-                margin-right: 0.5rem;
-                height: 4rem;
-                width: 4rem;
-                border-radius: 50%;
-            }
+//         //     img {
+//         //         margin-right: 0.5rem;
+//         //         height: 4rem;
+//         //         width: 4rem;
+//         //         border-radius: 50%;
+//         //     }
 
-            > div {
-                text-align: start;
-                line-height: 1.2rem;
-            }
-        }
-    }
+//         //     > div {
+//         //         text-align: start;
+//         //         line-height: 1.2rem;
+//         //     }
+//         // }
+//     }
 }
 </style>

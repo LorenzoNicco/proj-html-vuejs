@@ -142,14 +142,18 @@ export default {
                 list-style: none;
                 display: none;
                 background-color: black;
-                width: 15rem;
+                width: 16rem;
 
                 > li {
                     display: block;
                     padding: 1rem;
 
+                    &:hover {
+                        background-color: rgb(34, 34, 34);
+                    }
+
                     &:not(:last-child) {
-                        border-bottom: 1px solid darkgray;
+                        border-bottom: 1px solid $color-gray;
                     }
 
                     a {
