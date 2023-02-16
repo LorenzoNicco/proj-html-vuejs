@@ -85,6 +85,7 @@ export default {
             left: 0;
             z-index: 30;
             background-color: white;
+            box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.3);
 
             .logo {
                 height: 2rem;
