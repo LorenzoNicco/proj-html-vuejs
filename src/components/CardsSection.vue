@@ -36,6 +36,7 @@ export default {
             width: 100%;
             min-height: 6rem;
             margin-bottom: 1rem;
+            @include flex-center;
 
             img {
                 object-fit: cover;
