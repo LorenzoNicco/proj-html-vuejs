@@ -87,7 +87,7 @@ export default {
     <div v-if="carousel == store.jumbo.length" class="slide jumbotron">
         <div class="external">
             <div class="inner" ref="inner"  :style="innerStyles">
-                <div class="col" v-for="index in store.jumbo"  :key="card">
+                <div class="col" v-for="index in store.jumbo">
                     <h5>{{ index.secondaryTitle }}</h5>
     
                     <h1>{{ index.mainTitle }}</h1>
