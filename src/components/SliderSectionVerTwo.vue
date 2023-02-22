@@ -19,30 +19,32 @@ export default {
     methods: {
 
         next () {
-            if (this.transitioning) 
-            return this.transitioning = true; //il movimento comincia quando transitioning diventa true
+            if (this.transitioning) return
+
+            this.transitioning = true; //il movimento comincia quando transitioning diventa true
 
             this.moveLeft();
 
             this.afterTransition(() => {
-                const card = this.store.jumbo.shift() //shift rimuove il primo elemento di un array, creando una costante con esso, e lasciando l'array con gli elementi rimanenti
-                this.store.jumbo.push(card) //con questa funzione, pushiamo nuovamente l'elemento tolto prima nell'array, così da farl odiventare l'ultimo della lista
-                this.resetTranslate() //resetta la posizione delle card dopo aver fatto scorrere il container
-                this.transitioning = false
+                const card = this.store.jumbo.shift(); //shift rimuove il primo elemento di un array, creando una costante con esso, e lasciando l'array con gli elementi rimanenti
+                this.store.jumbo.push(card); //con questa funzione, pushiamo nuovamente l'elemento tolto prima nell'array, così da farl odiventare l'ultimo della lista
+                this.resetTranslate(); //resetta la posizione delle card dopo aver fatto scorrere il container
+                this.transitioning = false;
             });
         },
 
         prev () {
-            if (this.transitioning)
-            return this.transitioning = true;
+            if (this.transitioning) return
+            
+            this.transitioning = true;
 
             this.moveRight();
 
             this.afterTransition(() => {
-                const card = this.store.jumbo.pop() //uguale a shift, ma agisce sull'ultimo elemento dell'array
-                this.store.jumbo.unshift(card) //uguale a push, ma mette l'elemento all'inizio dell'array
-                this.resetTranslate()
-                this.transitioning = false
+                const card = this.store.jumbo.pop(); //uguale a shift, ma agisce sull'ultimo elemento dell'array
+                this.store.jumbo.unshift(card); //uguale a push, ma mette l'elemento all'inizio dell'array
+                this.resetTranslate();
+                this.transitioning = false;
             });
         },
 
@@ -62,10 +64,10 @@ export default {
         },
         afterTransition (callback) {
             const listener = () => {
-                callback()
-                this.$refs.inner.removeEventListener('transitionend', listener) //$ref si riferisce all'elemento che ha la proprietà ref
+                callback();
+                this.$refs.inner.removeEventListener('transitionend', listener); //$ref si riferisce all'elemento che ha la proprietà ref
             }
-            this.$refs.inner.addEventListener('transitionend', listener)
+            this.$refs.inner.addEventListener('transitionend', listener); //transitionend è un evento che stabilisce quando una transizione css è compiuta
         },
 
         resetTranslate () {
